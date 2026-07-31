@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">InsightBridge AI</div>
+</nav>
+
+<div class="container">
+
+    <h1>Analysis History</h1>
+
+    {% for analysis in analyses %}
+
+    <div class="card analysis-card">
+
+        <h2>{{ analysis.company_name }}</h2>
+
+        <p>{{ analysis.overview }}</p>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

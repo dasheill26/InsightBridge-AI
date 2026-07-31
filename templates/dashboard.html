@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">InsightBridge AI</div>
+</nav>
+
+<div class="container">
+
+    <h1>Research Dashboard</h1>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>Company Analysis</h3>
+            <p>Research and analyse companies.</p>
+
+            <a href="/company-analysis">
+                <button>Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Analysis History</h3>
+            <p>View previous research reports.</p>
+
+            <a href="/history">
+                <button>Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Industry Insights</h3>
+            <p>Coming Soon</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

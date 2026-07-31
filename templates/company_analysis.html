@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">InsightBridge AI</div>
+</nav>
+
+<div class="container">
+
+    <h1>Company Analysis</h1>
+
+    <form method="POST">
+        <input type="text" name="company" placeholder="Enter company name" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+
+    <div class="card analysis-card">
+        <h2>{{ result.company }}</h2>
+
+        <h3>Overview</h3>
+        <p>{{ result.overview }}</p>
+
+        <h3>Strengths</h3>
+        <ul>
+            {% for item in result.strengths %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Weaknesses</h3>
+        <ul>
+            {% for item in result.weaknesses %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Opportunities</h3>
+        <ul>
+            {% for item in result.opportunities %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Threats</h3>
+        <ul>
+            {% for item in result.threats %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
